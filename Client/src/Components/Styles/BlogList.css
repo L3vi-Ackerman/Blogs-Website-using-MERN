@@ -1,0 +1,24 @@
+.blog{
+    border-bottom: 2px solid #33333336;
+    padding-bottom: 2vw;
+    margin: 2vw 0;
+}
+h1{
+    text-align: center;
+    margin-bottom: 3vw;
+    font-size: 2vw;
+}
+h2{
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+}
+.content-paragraph{
+    font-size: 1.2vw;
+    line-height: 1.6;
+}
+
+.additional-info-div{
+    margin-top: 1vw;
+    font-size: 0.9vw;
+    line-height: 1.5;
+}
