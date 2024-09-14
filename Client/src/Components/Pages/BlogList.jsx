@@ -34,7 +34,7 @@ const BlogList = () => {
     navigate(`/blog/${id}`);
   };
   return (
-    <div>
+    <div className="hero-content-list">
       <h1>My Blogs</h1>
       <div className="div-contents">
         {blogs.map((blog, index) => {

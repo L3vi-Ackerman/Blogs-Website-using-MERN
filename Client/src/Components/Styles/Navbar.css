@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: space-between;
     font-size: 1.1vw;
+    border-bottom: 2px solid #5f99be;
+
     
 }
 .active{
@@ -17,6 +19,9 @@
 }
 
 .company-logo{
+    font-size:1.7vw;
+    color: #5f99be;
+    cursor: pointer;
     font-weight: bold;
 }
 
