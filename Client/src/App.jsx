@@ -6,6 +6,7 @@ import Navbar from "./Components/Pages/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { BlogProvider } from "./Components/Context/BlogContext";
+import BlogDetail from "./Components/Pages/BlogDetail";
 const App = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/signin" element={<SignIn />} />
+              <Route path="/blog/:id" element={<BlogDetail />} />
             </Routes>
           </div>
         </Router>

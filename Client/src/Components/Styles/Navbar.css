@@ -8,9 +8,10 @@
     font-size: 1.1vw;
     
 }
-
+.active{
+    color:#5f99be;
+}
 .nav-links{
-    position:relative;
     display: flex;
     transition: color 0.3s ease;
 }
