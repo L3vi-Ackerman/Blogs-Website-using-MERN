@@ -34,3 +34,31 @@ const BlogDetail = () => {
 };
 
 export default BlogDetail;
+
+
+// return (
+//   <div>
+//     <h1>Blog Posts</h1>
+//     {blogs.map((blog) => (
+//       <div key={blog._id}>
+//         <h2>{blog.title}</h2>
+//         <div>
+//           {blog.topics.map((topic, index) => (
+//             <div key={index}>
+//               <h3>{topic}</h3>
+//               {Array.isArray(blog.paragraphs[index])?(
+//                 <ul>
+//                   {blog.paragraphs[index].map((item,idx)=>(
+//                     <li key = {idx}>{item}</li>
+//                   ))}
+//                   </ul>
+//               ):(
+//                 <p>{blog.paragraphs[index]}</p>
+//               )}
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     ))}
+//   </div>
+// );

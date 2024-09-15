@@ -33,38 +33,48 @@ const BlogList = () => {
   const handleClick = (id) => {
     navigate(`/blog/${id}`);
   };
-  return (
-    <div className="hero-content-list">
-      <h1>My Blogs</h1>
-      <div className="div-contents">
-        {blogs.map((blog, index) => {
-          const formattedDate = blog.updatedAt.slice(
-            0,
-            blog.updatedAt.indexOf("T")
-          );
+  // return (
+  //   <div className="hero-content-list">
+  //     <h1>My Blogs</h1>
+  //     <div className="div-contents">
+  //       {blogs.map((blog, index) => {
+  //         const formattedDate = blog.updatedAt.slice(
+  //           0,
+  //           blog.updatedAt.indexOf("T")
+  //         );
 
-          const truncatedContent = truncateAfterSpaces(blog.content, 20);
-          return (
-            <div
-              className="blog"
-              key={blog._id}
-              onClick={() => handleClick(blog._id)}
-            >
-              <h2>
-                {index + 1}. {blog.title}
-              </h2>
-              <p className="content-paragraph">{truncatedContent}</p>
-              <div className="additional-info-div">
-                <p className="paragraph">Last Updated: {formattedDate}</p>
-                <p>Author: {blog.author}</p>
-                {/* <div className="redirect-btn">
-                <FontAwesomeIcon icon={faArrowRight} />
-                </div> */}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+  //         const truncatedContent = truncateAfterSpaces(blog.content, 20);
+  //         return (
+  //           <div
+  //             className="blog"
+  //             key={blog._id}
+  //             onClick={() => handleClick(blog._id)}
+  //           >
+  //             <h2>
+  //               {index + 1}. {blog.title}
+  //             </h2>
+  //             <p className="content-paragraph">{truncatedContent}</p>
+  //             <div className="additional-info-div">
+  //               <p className="paragraph">Last Updated: {formattedDate}</p>
+  //               <p>Author: {blog.author}</p>
+  //               {/* <div className="redirect-btn">
+  //               <FontAwesomeIcon icon={faArrowRight} />
+  //               </div> */}
+  //             </div>
+  //           </div>
+  //         );
+  //       })}
+  //     </div>
+  //   </div>
+  // );
+  return (
+    <div className="div-contents">
+      <h1>Blog Posts</h1>
+      {blogs.map((blog, index) => (
+        <div key={blog._id} className="blog-name">
+          <h2>{index+1}. {blog.title}</h2>
+        </div>
+      ))}
     </div>
   );
 };
