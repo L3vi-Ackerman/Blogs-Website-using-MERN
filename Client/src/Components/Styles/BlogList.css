@@ -1,41 +1,88 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #f4f4f9;
+    background: linear-gradient(135deg, #bb3a3a 0%, #8a922e 50%, #3fcf4b 100%);
+    color: #333;
+    margin: 0;
+    padding: 0; */
+}
+.hero-section {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .div-contents {
-    width: 80%;
-    margin:auto;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  justify-items: center;
+  align-items: stretch;
+}
 
-  grid-template-columns: 1fr 1fr;
-  gap: 2vw;
+.blog-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   cursor: pointer;
-}
-.blog-name{
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.blog-name:hover{
-  transform: scale(1.1);
-}
-
-.blog {
-
-  background-color: #ddd;
-  border-bottom: 2px solid #33333336;
-  padding: 2vw;
-  border-radius: 0.5vw;
-  box-shadow: 5px 5px #444;
-  margin: 0.5vw 0;
-  border: 2px solid #333;
-}
-h1 {
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
-  margin-bottom: 3vw;
+}
+
+.blog-item img {
+  width: 10vw;
+  height: 10vw;
+  object-fit: cover;
+  border-bottom: 2px solid #4caf50;
+  margin-bottom: 10px;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.blog-item p {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+  padding: 10px 0;
+  font-weight: 500;
+  text-transform: capitalize;
+  flex-grow: 1; 
+}
+.blog-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+} 
+
+.hero-section h1 {
   font-size: 2vw;
+  font-weight: normal;
+
+  color: #2e7d32;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: center;
 }
-h2 {
-  font-size: 1.5vw;
-  margin-bottom: 1vw;
+
+.blog-item p:hover {
+  color: #388e3c;
 }
+
 .content-paragraph {
-  font-size: 1.vw;
+  font-size: 1vw;
   line-height: 1.6;
 }
 

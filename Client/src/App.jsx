@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { BlogProvider } from "./Components/Context/BlogContext";
 import BlogDetail from "./Components/Pages/BlogDetail";
+import './App.css'
 const App = () => {
   return (
     <>

@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BlogContext } from "../Context/BlogContext";
 import "../Styles/BlogDetail.css";
-import "../Styles/BlogList.css";
 
 const BlogDetail = () => {
   const { id } = useParams(); // Get the blog ID from the URL
@@ -10,7 +9,6 @@ const BlogDetail = () => {
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    console.log("this is inside useEffect - blogdetail");
     const foundBlog = blogs.find((blog) => blog._id === id);
     setBlog(foundBlog);
   }, [id, blogs]);
@@ -23,8 +21,22 @@ const BlogDetail = () => {
   return (
     <div className="detail-content">
       <h1>{blog.title}</h1>
-      <p className="content-paragraph">{blog.content}</p>
-
+      <div>
+           {blog.topics.map((topic, index) => (
+            <div key={index} className="detail-hero-content">
+              <h3>{topic}</h3>
+              {Array.isArray(blog.paragraphs[index])?(
+                <ul>
+                  {blog.paragraphs[index].map((item,idx)=>(
+                    <li key = {idx}>{item}</li>
+                  ))}
+                  </ul>
+              ):(
+                <p>{blog.paragraphs[index]}</p>
+              )}
+            </div>
+          ))}
+        </div>
       <div className="additional-info-div">
         <p>Author: {blog.author}</p>
         <p>Last Updated: {formattedDate}</p>

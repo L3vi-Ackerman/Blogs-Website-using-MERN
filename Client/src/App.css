@@ -1,12 +1,9 @@
 *{
-  background-color: rgb(255, 255, 255);
-  color: #333333;
+
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
-html,body{
-  width: 100%;
-}
+
 .parent{
   display:flex;
   flex-direction: column;

@@ -5,16 +5,18 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="company-logo">BLOGS</div>
-      <div className="nav-links">
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/about">About</NavLink>
-        </li>
-        <li>
-          <NavLink to="/signin">SignIn</NavLink>
-        </li>
+      <div className="nav-links-div">
+        <ul className="nav-links">
+          <li>
+            <NavLink to="/" className="nav-link">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className="nav-link">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/signin" className="nav-link">SignIn</NavLink>
+          </li>
+        </ul>
       </div>
     </div>
   );
