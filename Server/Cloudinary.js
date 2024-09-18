@@ -1,10 +1,6 @@
 require('dotenv').config(); // This should be the first line;
 const cloudinary = require('cloudinary').v2;
 
-console.log('CLOUD_NAME:', process.env.CLOUD_NAME); // Debug output
-console.log('CLOUD_KEY:', process.env.CLOUD_KEY);   // Debug output
-console.log('CLOUD_KEY_SECRET:', process.env.CLOUD_KEY_SECRET); // Debug output
-
 cloudinary.config({
     cloud_name:process.env.CLOUD_NAME,
     api_key: process.env.CLOUD_KEY,
@@ -46,7 +42,7 @@ const uploadImage = (path) => {
     '../assets/go.png',
     '../assets/java.png',
     '../assets/javascript.png',
-    '../assets/python.jpg',
+    '../assets/python.png',
     '../assets/react.png',
     '../assets/ruby.png',
     '../assets/swift.jpg',
